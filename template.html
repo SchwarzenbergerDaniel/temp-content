@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BENA AFS – Kundenportal</title>
+<style>
+  :root{
+    --ink:#1b1b1a;          /* Überschriften */
+    --body:#46453f;         /* Fließtext */
+    --muted:#8a887f;        /* gedämpft */
+    --line:#e4e1d9;         /* Haarlinien (warmes Grau) */
+    --paper:#ffffff;        /* Karte */
+    --shell:#f6f4ef;        /* Hintergrund außen */
+    --accent:#1f3a52;       /* gedecktes Marineblau */
+    --serif:Georgia,'Times New Roman',Cambria,serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--shell);font-family:var(--sans);color:var(--body);
+       line-height:1.6;-webkit-font-smoothing:antialiased;}
+
+  .wrap{max-width:1000px;margin:0 auto;background:var(--paper);
+        border:1px solid var(--line);border-top:3px solid var(--accent);}
+
+  /* ---------- Masthead ---------- */
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;
+            gap:24px;padding:26px 48px;border-bottom:1px solid var(--line);}
+  .brand{font-family:var(--serif);font-size:23px;letter-spacing:.06em;
+         color:var(--ink);font-weight:400;}
+  .brand small{display:block;font-family:var(--sans);font-size:10.5px;
+               letter-spacing:.28em;text-transform:uppercase;color:var(--muted);
+               margin-top:5px;font-weight:600;}
+  .masthead .context{font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+                     color:var(--muted);font-weight:600;white-space:nowrap;}
+
+  /* ---------- gemeinsame Bausteine ---------- */
+  .section{padding:46px 48px;border-bottom:1px solid var(--line);}
+  .eyebrow{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
+           color:var(--accent);font-weight:700;margin-bottom:18px;}
+  h1,h2{font-family:var(--serif);font-weight:400;color:var(--ink);letter-spacing:-.01em;}
+  .lead h1{font-size:34px;line-height:1.18;max-width:18ch;}
+  .lead p{font-size:16.5px;color:var(--body);margin-top:18px;max-width:52ch;}
+  h2{font-size:23px;}
+
+  /* ---------- Leistungen ---------- */
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+        border-top:1px solid var(--line);margin-top:6px;}
+  .svc{padding:24px 22px 24px 0;border-right:1px solid var(--line);}
+  .svc:nth-child(4n){border-right:0;padding-right:0;}
+  .svc:nth-child(n+1){padding-left:22px;}
+  .svc:first-child,.svc:nth-child(5){padding-left:0;}
+  .svc .no{font-family:var(--serif);font-size:14px;color:var(--muted);
+           display:block;margin-bottom:12px;}
+  .svc h3{font-size:15.5px;color:var(--ink);font-weight:600;margin-bottom:8px;
+          letter-spacing:.005em;}
+  .svc p{font-size:13px;color:var(--body);line-height:1.62;}
+
+  /* ---------- Fristen ---------- */
+  .rows{margin-top:4px;}
+  .row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+       padding:15px 0;border-bottom:1px solid var(--line);}
+  .row:last-child{border-bottom:0;}
+  .row .label{font-size:15px;color:var(--ink);}
+  .row .date{font-size:13.5px;color:var(--accent);font-weight:600;
+             text-align:right;white-space:nowrap;}
+
+  /* ---------- Sprachen + Foto ---------- */
+  .langs{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;}
+  .photo{margin:0;}
+  .photo img{width:100%;height:auto;display:block;filter:grayscale(100%);
+             border:1px solid var(--line);}
+  .photo figcaption{font-size:11px;color:var(--muted);margin-top:10px;
+                    letter-spacing:.04em;}
+  .langs h2{margin-bottom:8px;}
+  .langs .intro{font-size:14.5px;color:var(--body);max-width:46ch;margin-bottom:22px;}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;}
+  .chip{font-size:13px;color:var(--ink);border:1px solid var(--line);
+        padding:6px 14px;border-radius:999px;background:#fff;}
+
+  /* ---------- FAQ ---------- */
+  details{border-bottom:1px solid var(--line);}
+  details:first-of-type{border-top:1px solid var(--line);}
+  summary{list-style:none;cursor:pointer;padding:16px 36px 16px 0;position:relative;
+          font-size:15px;color:var(--ink);font-family:var(--serif);}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";position:absolute;right:0;top:14px;font-size:19px;
+                 color:var(--muted);font-family:var(--sans);line-height:1;
+                 transition:transform .2s ease;}
+  details[open] summary::after{content:"–";}
+  details .answer{font-size:13.5px;color:var(--body);padding:0 36px 18px 0;
+                  line-height:1.65;max-width:70ch;}
+
+  /* ---------- Footer ---------- */
+  .foot{padding:30px 48px 34px;display:flex;flex-wrap:wrap;gap:8px 32px;
+        align-items:baseline;justify-content:space-between;}
+  .foot .org{font-family:var(--serif);font-size:14px;color:var(--ink);}
+  .foot .meta{font-size:12px;color:var(--muted);}
+  .foot a{color:var(--accent);text-decoration:none;}
+  .foot a:hover{text-decoration:underline;}
+
+  /* ---------- responsiv ---------- */
+  @media (max-width:820px){
+    .masthead,.section,.foot{padding-left:28px;padding-right:28px;}
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .svc{border-right:1px solid var(--line);padding-left:22px !important;}
+    .svc:nth-child(2n){border-right:0;padding-right:0;}
+    .svc:nth-child(2n+1){padding-left:0 !important;}
+    .langs{grid-template-columns:1fr;gap:26px;}
+    .photo{max-width:340px;}
+    .lead h1{font-size:28px;}
+  }
+  @media (max-width:480px){
+    .grid{grid-template-columns:1fr;}
+    .svc{border-right:0 !important;padding-left:0 !important;
+         border-bottom:1px solid var(--line);}
+    .svc:last-child{border-bottom:0;}
+    .masthead{flex-direction:column;gap:10px;}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="brand">BENA AFS<small>Steuerberatung</small></div>
+      <span class="context">Kundenportal</span>
+    </header>
+
+    <!-- Hero -->
+    <section class="section lead">
+      <p class="eyebrow">Willkommen</p>
+      <h1>Steuerberatung, die mitdenkt.</h1>
+      <p>Klein genug für persönliche Beratung – groß genug für Ihren Erfolg.
+         In diesem Portal finden Sie Ihre Unterlagen, wichtige Fristen und
+         Antworten auf die häufigsten Fragen.</p>
+    </section>
+
+    <!-- Leistungen -->
+    <section class="section">
+      <p class="eyebrow">Leistungen</p>
+      <div class="grid">
+        <article class="svc">
+          <span class="no">01</span>
+          <h3>Buchhaltung</h3>
+          <p>Laufend, digital und vollständig – von der Belegerfassung bis zum Reporting.</p>
+        </article>
+        <article class="svc">
+          <span class="no">02</span>
+          <h3>Lohnverrechnung</h3>
+          <p>Monatliche Abrechnung, An- und Abmeldungen, Auszahlungen – pünktlich und korrekt.</p>
+        </article>
+        <article class="svc">
+          <span class="no">03</span>
+          <h3>Jahresabschlüsse</h3>
+          <p>Für GmbH, OG, KG und Einzelunternehmen – fristgerecht und rechtssicher.</p>
+        </article>
+        <article class="svc">
+          <span class="no">04</span>
+          <h3>Beratung</h3>
+          <p>ESt, KöSt, USt, GSVG/ASVG – klare Antworten auf komplexe Fragen.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Fristen -->
+    <section class="section">
+      <p class="eyebrow">Wichtige Fristen</p>
+      <div class="rows">
+        <div class="row"><span class="label">Umsatzsteuervoranmeldung</span><span class="date">15. des Folgemonats</span></div>
+        <div class="row"><span class="label">KöSt- / ESt-Vorauszahlung</span><span class="date">15. Feb · Mai · Aug · Nov</span></div>
+        <div class="row"><span class="label">Jahresabschluss</span><span class="date">30. September (Folgejahr)</span></div>
+        <div class="row"><span class="label">Steuererklärungen</span><span class="date">30. April</span></div>
+      </div>
+    </section>
+
+    <!-- Sprachen + Foto -->
+    <section class="section">
+      <div class="langs">
+        <figure class="photo">
+          <img src="straussen.png" alt="Drei aufmerksam blickende Strauße in Schwarz-Weiß"
+               onerror="this.closest('.photo').style.display='none'">
+          <figcaption>Wir hören zu – in Ihrer Sprache.</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">Mehrsprachige Beratung</p>
+          <h2>Wir sprechen Ihre Sprache.</h2>
+          <p class="intro">Beratung gelingt am besten in der Muttersprache.
+             Bei uns werden Sie in neun Sprachen persönlich betreut.</p>
+          <div class="chips">
+            <span class="chip">Deutsch</span>
+            <span class="chip">English</span>
+            <span class="chip" lang="ar" dir="rtl">العربية</span>
+            <span class="chip" lang="fa" dir="rtl">فارسی</span>
+            <span class="chip" lang="sr">српски</span>
+            <span class="chip" lang="bs">bosanski</span>
+            <span class="chip" lang="uk">українська</span>
+            <span class="chip" lang="hr">hrvatski</span>
+            <span class="chip" lang="ru">Русский</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <p class="eyebrow">Häufige Fragen</p>
+      <details>
+        <summary>Welche Dateien lassen sich automatisiert einspielen?</summary>
+        <div class="answer">CSV, CAMT.053 (Kontoauszüge), MT940 sowie gängige PDF-Formate werden unterstützt.</div>
+      </details>
+      <details>
+        <summary>Mit welcher Auflösung sind Belege gut lesbar?</summary>
+        <div class="answer">Mindestens 300 dpi empfohlen. PDF/A oder JPG, heller Hintergrund, gerade ausgerichtet.</div>
+      </details>
+      <details>
+        <summary>Welche Unterlagen brauche ich zur Anmeldung eines Dienstnehmers?</summary>
+        <div class="answer">SV-Nummer, Wohnsitz, Bankverbindung, Dienstvertrag, Eintrittstag und Beschäftigungsausmaß.</div>
+      </details>
+      <details>
+        <summary>Wie lade ich Belege korrekt hoch?</summary>
+        <div class="answer">Im richtigen Monatsordner unter „Belege in PDF“ ablegen. Dateiname: Datum_Lieferant_Betrag.</div>
+      </details>
+    </section>
+
+    <!-- Footer -->
+    <footer class="foot">
+      <span class="org">BENA AFS Steuerberatung</span>
+      <span class="meta">
+        <a href="mailto:office@bena-afs.example">office@bena-afs.example</a>
+        &nbsp;·&nbsp; +43 1 234 567 &nbsp;·&nbsp; Mo–Fr 8–17 Uhr
+      </span>
+    </footer>
+
+  </div>
+</body>
+</html>
