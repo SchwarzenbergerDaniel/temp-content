@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
+<head><script>try{if(window.self!==window.top)document.documentElement.classList.add("embedded")}catch(e){document.documentElement.classList.add("embedded")}</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BENA AFS – Kundenportal</title>
@@ -118,7 +118,7 @@
     .masthead{flex-direction:column;gap:10px;}
   }
 </style>
-</head>
+<style>html.embedded,html.embedded body{background:transparent!important;}html.embedded .wrap{max-width:none!important;border-left:0!important;border-right:0!important;border-bottom:0!important;}</style></head>
 <body>
   <div class="wrap">
 
@@ -234,5 +234,39 @@
     </footer>
 
   </div>
-</body>
+<script>
+(function(){
+  function measure(){
+    var b = document.body, e = document.documentElement;
+    return Math.ceil(Math.max(
+      b ? b.scrollHeight : 0, b ? b.offsetHeight : 0,
+      e ? e.scrollHeight : 0, e ? e.offsetHeight : 0
+    ));
+  }
+  var last = 0;
+  function send(force){
+    var h = measure();
+    if (!force && h === last) return;
+    last = h;
+    try { parent.postMessage({ type: "portal-height", height: h }, "*"); } catch (err) {}
+  }
+  function init(){
+    if (window.ResizeObserver && document.body) {
+      try { new ResizeObserver(function(){ send(false); }).observe(document.body); } catch (err) {}
+    }
+    window.addEventListener("resize", function(){ send(false); });
+    window.addEventListener("load", function(){ send(true); });
+    window.addEventListener("message", function(ev){
+      if (ev && ev.data && ev.data.type === "portal-request-height") send(true);
+    });
+    send(true);
+    setTimeout(function(){ send(true); }, 300);
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script></body>
 </html>
