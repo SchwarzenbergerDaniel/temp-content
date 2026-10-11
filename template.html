@@ -21,10 +21,18 @@
 
   .wrap{max-width:1000px;margin:0 auto;background:var(--paper);
         border:1px solid var(--line);border-top:3px solid var(--accent);
-        color:var(--body);line-height:1.6;}
+        color:var(--body);line-height:1.6;overflow-wrap:break-word;}
+  /* Nichts darf breiter als die Seite werden (sonst wirkt sie im iframe
+     rechts abgeschnitten): Medien begrenzen, Spalten dürfen schrumpfen. */
+  .wrap img,.wrap video,.wrap iframe,.wrap embed,.wrap object{max-width:100%;}
+  .wrap pre{max-width:100%;overflow-x:auto;white-space:pre-wrap;}
+  .grid>*,.cols>*,.langs>*{min-width:0;}
+  /* Eigenes HTML mit fester Breite scrollt in seinem Abschnitt, statt die
+     ganze Seite zu verbreitern. */
+  .htmlblock{overflow-x:auto;}
 
-  .masthead{display:flex;align-items:baseline;justify-content:space-between;
-            gap:24px;padding:26px 48px;border-bottom:1px solid var(--line);}
+  .masthead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+            gap:8px 24px;padding:26px 48px;border-bottom:1px solid var(--line);}
   .brand{font-family:var(--serif);font-size:23px;letter-spacing:.06em;
          color:var(--ink);font-weight:400;}
   .brand small{display:block;font-family:var(--sans);font-size:10.5px;
@@ -53,10 +61,11 @@
   .svc p{font-size:13px;color:var(--body);line-height:1.62;}
 
   .rows{margin-top:4px;}
-  .row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;
+  .row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 24px;
        padding:15px 0;border-bottom:1px solid var(--line);}
   .row:last-child{border-bottom:0;}
-  .row .label{font-size:15px;color:var(--ink);}
+  /* Wird es eng, rutscht die Frist unter die Bezeichnung statt über den Rand. */
+  .row .label{font-size:15px;color:var(--ink);flex:1 1 14em;min-width:0;}
   .row .date{font-size:13.5px;color:var(--accent);font-weight:600;
              text-align:right;white-space:nowrap;}
 
@@ -125,6 +134,13 @@
   @media (max-width:480px){
     .grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}
     .masthead{flex-direction:column;gap:10px;}
+    .row{flex-direction:column;align-items:flex-start;}
+    .row .label{flex:none;}
+    .row .date{white-space:normal;text-align:left;}
+  }
+  @media (max-width:400px){
+    .masthead,.section,.foot{padding-left:20px;padding-right:20px;}
+    .lead h1{font-size:25px;}
   }</style>
 </head>
 <body>
@@ -197,7 +213,7 @@
         <div>
           <p class="eyebrow">Mehrsprachige Beratung</p>
           <h2>Wir sprechen Ihre Sprache.</h2>
-          <p class="intro">Beratung gelingt am besten in der Muttersprache. Bei uns werden Sie in neun verschiedenen Sprachen persönlich betreut.&nbsp;</p>
+          <p class="intro">Beratung gelingt am besten in der Muttersprache. Bei uns werden Sie in neun verschiedenen Sprachen persönlich betreut.</p>
           <div class="chips"><span class="chip">Deutsch</span><span class="chip">English</span><span class="chip" lang="ar" dir="rtl">العربية</span><span class="chip" lang="fa" dir="rtl">فارسی</span><span class="chip" lang="sr">српски</span><span class="chip" lang="bs">bosanski</span><span class="chip" lang="uk">українська</span><span class="chip" lang="hr">hrvatski</span><span class="chip" lang="ru">Русский</span></div>
         </div>
       </div>
