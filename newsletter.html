@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>{{subject}}</title>
+  <!-- Newsletter-Rahmen (newsletter.html im öffentlichen Repo). Die App setzt
+       beim Versand Betreff, Vorschautext, Überschrift, Text und Schaltfläche
+       aus dem Newsletter-Editor ein; Überschrift und Schaltfläche entfallen,
+       wenn im Newsletter keine angegeben ist. -->
+  <style>
+    /* Schmale Handys: weniger Rand, damit nichts über den Bildschirm ragt */
+    @media only screen and (max-width:480px){
+      .rand{padding-left:6px !important;padding-right:6px !important;}
+      .innen{padding-left:22px !important;padding-right:22px !important;}
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background:#efece5;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;height:0;width:0;">{{preheader}}</div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#efece5;">
+    <tr>
+      <td class="rand" align="center" style="padding:28px 12px;">
+
+        <!--[if mso]><table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <div style="max-width:600px;margin:0 auto;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;background:#fffefb;border:1px solid #ddd8cc;overflow:hidden;">
+
+          <!-- Kopf mit schwarzer Unterlinie -->
+          <tr>
+            <td class="innen" data-mail-kopf style="padding:28px 40px 18px 40px;border-bottom:2px solid #1c1c1c;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="left" valign="bottom">
+                    <img data-mail-logo src="logo.png" width="140" height="44" alt="BENA AFS" style="display:block;border:0;width:140px;height:auto;">
+                  </td>
+                  <td align="right" valign="bottom" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic;color:#6b665c;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Überschrift, Text und Schaltfläche aus dem Newsletter-Editor -->
+          <!--{{#title}}-->
+          <tr><td class="innen" style="padding:34px 40px 0 40px;font-family:Georgia,'Times New Roman',serif;">
+            <div style="font-size:30px;line-height:1.2;font-weight:normal;color:#1c1c1c;">{{title}}</div>
+          </td></tr>
+          <!--{{/title}}-->
+          <tr><td class="innen" style="padding:18px 40px 0 40px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.65;color:#3a3833;word-break:break-word;">
+            {{content}}
+          </td></tr>
+          <!--{{#button}}-->
+          <tr><td class="innen" style="padding:28px 40px 0 40px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td bgcolor="#1c1c1c">
+                <a href="{{button_url}}" target="_blank" style="display:inline-block;padding:14px 30px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ffffff;text-decoration:none;">{{button_label}}</a>
+              </td>
+            </tr></table>
+          </td></tr>
+          <!--{{/button}}-->
+          <tr><td style="padding:0;height:36px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+          <!-- Fußzeile -->
+          <tr>
+            <td class="innen" style="padding:20px 40px;border-top:1px solid #ddd8cc;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.7;color:#8a8478;">
+              BENA AFS Steuerberatung<br>
+              Sie erhalten diese Nachricht als Kundin bzw. Kunde von BENA AFS.
+            </td>
+          </tr>
+
+        </table>
+        </div>
+        <!--[if mso]></td></tr></table><![endif]-->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
