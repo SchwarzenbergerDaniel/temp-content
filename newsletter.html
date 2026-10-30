@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>{{subject}}</title>
+  <!-- Newsletter-Rahmen (newsletter.html im öffentlichen Repo). Die App setzt
+       beim Versand Betreff, Vorschautext, Überschrift, Text und Schaltfläche
+       aus dem Newsletter-Editor ein; Überschrift und Schaltfläche entfallen,
+       wenn im Newsletter keine angegeben ist. -->
+  <style>
+    /* Schmale Handys: weniger Rand, damit nichts über den Bildschirm ragt */
+    @media only screen and (max-width:480px){
+      .rand{padding-left:6px !important;padding-right:6px !important;}
+      .innen{padding-left:22px !important;padding-right:22px !important;}
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background:#eef3f7;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;height:0;width:0;">{{preheader}}</div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eef3f7;">
+    <tr>
+      <td class="rand" align="center" style="padding:28px 12px;">
+
+        <!--[if mso]><table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+        <div style="max-width:600px;margin:0 auto;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #dde6ee;">
+
+          <!-- Blaue Oberkante -->
+          <tr><td bgcolor="#1ea5de" style="height:6px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+          <!-- Kopf -->
+          <tr>
+            <td class="innen" data-mail-kopf style="padding:26px 36px 8px 36px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="left" valign="middle">
+                    <img data-mail-logo src="logo.png" width="150" height="47" alt="BENA AFS" style="display:block;border:0;width:150px;height:auto;">
+                  </td>
+                  <td align="right" valign="middle" style="font-family:'Segoe UI',Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;color:#0a6a98;">
+                    
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Überschrift, Text und Schaltfläche aus dem Newsletter-Editor -->
+          <!--{{#title}}-->
+          <tr><td class="innen" style="padding:22px 36px 0 36px;font-family:'Segoe UI',Arial,Helvetica,sans-serif;">
+            <div style="font-size:26px;line-height:1.25;font-weight:700;color:#1b2733;">{{title}}</div>
+          </td></tr>
+          <!--{{/title}}-->
+          <tr><td class="innen" style="padding:16px 36px 0 36px;font-family:'Segoe UI',Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65;color:#3d4b59;word-break:break-word;">
+            {{content}}
+          </td></tr>
+          <!--{{#button}}-->
+          <tr><td class="innen" style="padding:24px 36px 0 36px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+              <td bgcolor="#0a6a98" style="border-radius:10px;">
+                <a href="{{button_url}}" target="_blank" style="display:inline-block;padding:14px 28px;font-family:'Segoe UI',Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:10px;">{{button_label}}</a>
+              </td>
+            </tr></table>
+          </td></tr>
+          <!--{{/button}}-->
+          <tr><td style="padding:0;height:32px;font-size:0;line-height:0;">&nbsp;</td></tr>
+
+          <!-- Fußzeile -->
+          <tr>
+            <td class="innen" bgcolor="#1b2733" style="padding:22px 36px;font-family:'Segoe UI',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.7;color:#a9b6c3;">
+              <strong style="color:#ffffff;">BENA AFS Steuerberatung</strong><br>
+              Sie erhalten diese Nachricht als Kundin bzw. Kunde von BENA AFS.
+            </td>
+          </tr>
+
+        </table>
+        </div>
+        <!--[if mso]></td></tr></table><![endif]-->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
