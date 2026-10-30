@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><script>try{if(window.self!==window.top)document.documentElement.classList.add("embedded")}catch(e){document.documentElement.classList.add("embedded")}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BENA AFS – Portal</title>
+<!--
+  DESIGN 2 · „EDITORIAL"
+  Warmes Papier, Serifen-Überschriften, Haarlinien, nummerierte Kapitel –
+  seriös wie ein gut gesetzter Kanzleibrief. Tiefblau statt Hellblau als
+  Akzent (harmoniert mit dem Logo, besser lesbar).
+  Bilder: logo.png, straussen.png (Standardbilder der App, liegen neben
+  der template.html im öffentlichen Repo). In der App: Einstellungen → Design wählen.
+-->
+<style>
+  :root{
+    --papier:#f7f5f0; --weiss:#fffefb; --tinte:#1c1c1a; --text:#46453f; --leise:#8a877e;
+    --linie:#e2ddd2; --akzent:#0e5a82; --akzent-hell:#e7eff4;
+    --serif:Georgia,"Iowan Old Style","Palatino Linotype","Book Antiqua",Cambria,serif;
+    --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--papier);font-family:var(--sans);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:var(--akzent)}
+  .wrap{max-width:1080px;margin:0 auto;background:var(--weiss);border-left:1px solid var(--linie);border-right:1px solid var(--linie)}
+  .innen{padding-left:64px;padding-right:64px}
+
+  /* Kopfleiste */
+  .kopf{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 64px;border-bottom:1px solid var(--tinte)}
+  .kopf img{height:38px;width:auto}
+  .kopf .meta{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--leise);text-align:right}
+  .kopf .meta b{color:var(--tinte);font-weight:600}
+
+  /* Einstieg */
+  .hero{padding:76px 64px 60px;display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:end;border-bottom:1px solid var(--linie)}
+  .kicker{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--akzent);font-weight:600}
+  h1{font-family:var(--serif);font-weight:400;font-size:54px;line-height:1.06;letter-spacing:-.015em;color:var(--tinte);margin:18px 0 0}
+  h1 i{color:var(--akzent)}
+  .hero .lead{font-size:17.5px;border-left:2px solid var(--akzent);padding-left:22px}
+
+  /* Kapitel */
+  section{padding:64px 0;border-bottom:1px solid var(--linie)}
+  .kapitel{display:grid;grid-template-columns:180px 1fr;gap:40px}
+  .nr{font-family:var(--serif);font-size:15px;color:var(--leise)}
+  .nr b{display:block;font-size:44px;line-height:1;color:var(--tinte);font-weight:400;margin-bottom:10px}
+  h2{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.2;color:var(--tinte);margin-bottom:26px}
+
+  /* Leistungen */
+  .leistungen{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--tinte)}
+  .leistungen div{padding:24px 28px 26px 0;border-bottom:1px solid var(--linie)}
+  .leistungen div:nth-child(2n){padding-left:28px;padding-right:0;border-left:1px solid var(--linie)}
+  .leistungen h3{font-family:var(--serif);font-weight:400;font-size:21px;color:var(--tinte);margin-bottom:6px}
+  .leistungen p{font-size:15px}
+
+  /* Fristen */
+  .fristen{list-style:none;border-top:1px solid var(--tinte)}
+  .fristen li{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px solid var(--linie)}
+  .fristen .was{color:var(--tinte);font-weight:600;white-space:nowrap}
+  .fristen .punkte{flex:1;border-bottom:1px dotted #bdb6a6;transform:translateY(-4px);min-width:24px}
+  .fristen .wann{font-family:var(--serif);font-style:italic;color:var(--akzent);white-space:nowrap;font-size:17px}
+
+  /* Sprachen – großes Bild */
+  .bild{margin:0 0 30px}
+  .bild img{width:100%;max-height:300px;object-fit:contain;background:#fff;border-top:1px solid var(--tinte);border-bottom:1px solid var(--linie);padding:18px 0}
+  .bild figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:10px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--leise)}
+  /* Trennpunkte sitzen in der Lücke; am Zeilenanfang fallen sie aus dem
+     Listenrand und werden abgeschnitten (overflow:hidden). */
+  .sprachliste{list-style:none;display:flex;flex-wrap:wrap;column-gap:1.3em;overflow:hidden;font-family:var(--serif);font-size:21px;line-height:1.9;color:var(--tinte)}
+  .sprachliste li{position:relative}
+  .sprachliste span{unicode-bidi:isolate}
+  .sprachliste li::before{content:"·";position:absolute;left:-.85em;color:var(--akzent)}
+  .kapitel>div{min-width:0}
+  .sprachen .intro{font-size:17px;max-width:60ch;margin-bottom:18px}
+
+  /* FAQ */
+  .faq details{border-bottom:1px solid var(--linie)}
+  .faq details:first-of-type{border-top:1px solid var(--tinte)}
+  .faq summary{list-style:none;cursor:pointer;padding:20px 48px 20px 0;font-family:var(--serif);font-size:19px;color:var(--tinte);position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-family:var(--sans);font-size:22px;color:var(--akzent);transition:transform .2s}
+  .faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+  .faq .antwort{padding:0 0 22px;max-width:62ch}
+
+  /* Kontakt / Fuß */
+  .kontakt{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+  .kontakt p.gross{font-family:var(--serif);font-size:30px;line-height:1.25;color:var(--tinte)}
+  .kontakt .wege{text-align:right;font-size:15px}
+  .hinweis{margin-top:40px;padding:16px 0;border-top:1px solid var(--tinte);font-size:14.5px;color:var(--text)}
+  .hinweis b{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--akzent);font-size:16px}
+  footer{padding:26px 64px 34px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;letter-spacing:.04em;color:var(--leise)}
+
+  @media (max-width:900px){
+    .innen,.kopf,footer{padding-left:32px;padding-right:32px}
+    .hero{grid-template-columns:1fr;gap:28px;padding:56px 32px 44px}
+    .kapitel{grid-template-columns:1fr;gap:6px}
+    .nr b{font-size:32px}
+    h1{font-size:42px}
+  }
+  @media (max-width:560px){
+    .innen,.kopf,footer{padding-left:20px;padding-right:20px}
+    .hero{padding:44px 20px 36px}
+    section{padding:44px 0}
+    h1{font-size:34px}
+    h2{font-size:26px}
+    .kopf img{height:30px}
+    .kopf .meta{font-size:10px;letter-spacing:.14em}
+    .leistungen{grid-template-columns:1fr}
+    .leistungen div,.leistungen div:nth-child(2n){padding:20px 0;border-left:0}
+    .fristen li{flex-wrap:wrap}
+    .fristen .punkte{display:none}
+    .fristen .wann{width:100%}
+    .sprachliste{font-size:18px}
+    .kontakt{grid-template-columns:1fr}
+    .kontakt .wege{text-align:left}
+    .kontakt p.gross{font-size:24px}
+  }
+</style>
+<style>html.embedded,html.embedded body{background:transparent!important;}html.embedded .wrap{max-width:none!important;border-left:0!important;border-right:0!important;border-bottom:0!important;}</style></head>
+<body>
+<div class="wrap">
+
+  <header class="kopf">
+    <img src="logo.png" alt="BENA AFS" width="121" height="38">
+    <p class="meta"><b>Portal</b><br>Steuerberatung</p>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="kicker">Willkommen</p>
+      <h1>Steuerberatung, die <i>mitdenkt.</i></h1>
+    </div>
+    <p class="lead">Klein genug für persönliche Beratung – groß genug für Ihren Erfolg. In diesem Portal finden Sie Ihre Unterlagen, wichtige Fristen und Antworten auf die häufigsten Fragen.</p>
+  </div>
+
+  <section class="innen">
+    <div class="kapitel">
+      <p class="nr"><b>01</b>Leistungen</p>
+      <div>
+        <h2>Was wir für Sie übernehmen.</h2>
+        <div class="leistungen">
+          <div><h3>Buchhaltung</h3><p>Laufend, digital und vollständig – von der Belegerfassung bis zum Reporting.</p></div>
+          <div><h3>Lohnverrechnung</h3><p>Monatliche Abrechnung, An- und Abmeldungen, Auszahlungen – pünktlich und korrekt.</p></div>
+          <div><h3>Jahresabschlüsse</h3><p>Für GmbH, OG, KG und Einzelunternehmen – fristgerecht und rechtssicher.</p></div>
+          <div><h3>Beratung</h3><p>ESt, KöSt, USt, GSVG/ASVG – klare Antworten auf komplexe Fragen.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="innen">
+    <div class="kapitel">
+      <p class="nr"><b>02</b>Fristen</p>
+      <div>
+        <h2>Termine, die zählen.</h2>
+        <ul class="fristen">
+          <li><span class="was">Umsatzsteuervoranmeldung</span><span class="punkte"></span><span class="wann">15. des Folgemonats</span></li>
+          <li><span class="was">KöSt- / ESt-Vorauszahlung</span><span class="punkte"></span><span class="wann">15. Feb · Mai · Aug · Nov</span></li>
+          <li><span class="was">Steuererklärungen</span><span class="punkte"></span><span class="wann">30. April</span></li>
+          <li><span class="was">Jahresabschluss</span><span class="punkte"></span><span class="wann">30. September (Folgejahr)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="innen sprachen">
+    <div class="kapitel">
+      <p class="nr"><b>03</b>Sprachen</p>
+      <div>
+        <h2>Wir sprechen Ihre Sprache.</h2>
+        <figure class="bild">
+          <img src="straussen.png" alt="Drei Strauße blicken neugierig in die Kamera" width="514" height="470">
+          <figcaption><span>Wir hören zu – in Ihrer Sprache.</span><span>Beratung in neun Sprachen</span></figcaption>
+        </figure>
+        <p class="intro">Beratung gelingt am besten in der Muttersprache. Bei uns werden Sie in neun verschiedenen Sprachen persönlich betreut.</p>
+        <ul class="sprachliste" aria-label="Beratungssprachen">
+          <li><span>Deutsch</span></li>
+          <li><span lang="en">English</span></li>
+          <li><span lang="ar" dir="rtl">العربية</span></li>
+          <li><span lang="fa" dir="rtl">فارسی</span></li>
+          <li><span lang="sr">српски</span></li>
+          <li><span lang="bs">bosanski</span></li>
+          <li><span lang="uk">українська</span></li>
+          <li><span lang="hr">hrvatski</span></li>
+          <li><span lang="ru">Русский</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="innen faq">
+    <div class="kapitel">
+      <p class="nr"><b>04</b>Fragen</p>
+      <div>
+        <h2>Häufig gefragt.</h2>
+        <details><summary>Wie lade ich Belege korrekt hoch?</summary><p class="antwort">Im richtigen Monatsordner unter „Belege in PDF“ ablegen. Dateiname: Datum_Lieferant_Betrag.</p></details>
+        <details><summary>Mit welcher Auflösung sind Belege gut lesbar?</summary><p class="antwort">Mindestens 300 dpi empfohlen. PDF/A oder JPG, heller Hintergrund, gerade ausgerichtet.</p></details>
+        <details><summary>Welche Dateien lassen sich automatisiert einspielen?</summary><p class="antwort">CSV, CAMT.053 (Kontoauszüge), MT940 sowie gängige PDF-Formate werden unterstützt.</p></details>
+        <details><summary>Welche Unterlagen brauche ich zur Anmeldung eines Dienstnehmers?</summary><p class="antwort">SV-Nummer, Wohnsitz, Bankverbindung, Dienstvertrag, Eintrittstag und Beschäftigungsausmaß.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="innen">
+    <div class="kontakt">
+      <p class="gross">Fragen? Wir sind gerne für Sie da.</p>
+      <p class="wege">persönlich · telefonisch · per E-Mail</p>
+    </div>
+    <p class="hinweis"><b>Ihre Dokumente</b> finden Sie direkt unterhalb dieses Bereichs – dort können Sie auch Belege hochladen.</p>
+  </section>
+
+  <footer>
+    <span>BENA AFS STEUERBERATUNG</span>
+    <span>KUNDENPORTAL</span>
+  </footer>
+
+</div>
+<script>
+(function(){
+  // Hoehe des INHALTS – unabhaengig von der Hoehe des iframes. (Die
+  // scrollHeight von <html> ist nie kleiner als der iframe: Er koennte sonst
+  // nur wachsen, nie schrumpfen – nach dem Drehen des Tablets oder breiter
+  // Ziehen des Fensters bliebe Leerraum.) Gezaehlt wird die Unterkante des
+  // letzten Abschnitts (samt Rand) und alles, was ueber einen Abschnitt
+  // hinausragt (scrollHeight der body – die haengt nicht am iframe).
+  function measure(){
+    var b = document.body;
+    if (!b) return 0;
+    var px = function(v){ return parseFloat(v) || 0; };
+    var unten = 0, rand = 0;
+    for (var n = b.firstChild; n; n = n.nextSibling) {
+      var r = null, cs = null;
+      if (n.nodeType === 1) {
+        cs = window.getComputedStyle(n);
+        if (cs.display === "none" || cs.position === "fixed") continue;
+        r = n.getBoundingClientRect();
+        if (r.height <= 0 && r.width <= 0) continue;
+      } else if (n.nodeType === 3 && /\S/.test(n.nodeValue)) {
+        var g = document.createRange();
+        g.selectNodeContents(n);
+        r = g.getBoundingClientRect();
+      } else continue;
+      if (r.bottom >= unten) { unten = r.bottom; rand = cs ? px(cs.marginBottom) : 0; }
+    }
+    var bs = window.getComputedStyle(b), oben = b.getBoundingClientRect().top;
+    var abschnitte = unten + Math.max(rand, px(bs.marginBottom)) + px(bs.paddingBottom) + px(bs.borderBottomWidth);
+    var ueberstand = oben + px(bs.borderTopWidth) + b.scrollHeight + px(bs.borderBottomWidth) + px(bs.marginBottom);
+    return Math.ceil(Math.max(abschnitte, ueberstand) + (window.pageYOffset || 0));
+  }
+  var last = 0;
+  function send(force){
+    var h = measure();
+    if (!force && h === last) return;
+    last = h;
+    try { parent.postMessage({ type: "portal-height", height: h }, "*"); } catch (err) {}
+  }
+  function init(){
+    if (window.ResizeObserver && document.body) {
+      try { new ResizeObserver(function(){ send(false); }).observe(document.body); } catch (err) {}
+    }
+    window.addEventListener("resize", function(){ send(false); });
+    window.addEventListener("load", function(){ send(true); });
+    window.addEventListener("message", function(ev){
+      if (ev && ev.data && ev.data.type === "portal-request-height") send(true);
+    });
+    send(true);
+    setTimeout(function(){ send(true); }, 300);
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script></body>
+</html>
