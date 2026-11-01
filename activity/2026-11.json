@@ -288,6 +288,16 @@
    "ziel": "office@schwarzenberger-daniel.com",
    "ok": true,
    "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
+  },
+  {
+   "id": "mvxuqyzhrcyo",
+   "zeit": "2026-11-01T13:14:53.212Z",
+   "wer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "d schwarz",
+   "ziel": "office@schwarzenberger-daniel.com",
+   "ok": false,
+   "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
   }
  ]
 }
