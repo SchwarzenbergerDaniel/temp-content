@@ -20,7 +20,9 @@
           "an": "terrorgans123@gmail.com",
           "von": "danielschwarzenberger@companyname999366.onmicrosoft.com",
           "betreff": "Willkommen bei BENA AFS – schön, dass Sie da sind!",
-          "stand": "pruefen"
+          "stand": "unzustellbar",
+          "grund": "Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)",
+          "geprueft": "2026-11-01T12:54:22.079Z"
         },
         "eigentuemer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
         "berechtigt": [
@@ -47,7 +49,9 @@
           "an": "danischwarz999@gmail.com",
           "von": "danielschwarzenberger@companyname999366.onmicrosoft.com",
           "betreff": "Willkommen bei BENA AFS – schön, dass Sie da sind!",
-          "stand": "pruefen"
+          "stand": "unzustellbar",
+          "grund": "Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)",
+          "geprueft": "2026-11-01T12:54:22.079Z"
         },
         "eigentuemer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
         "berechtigt": [
