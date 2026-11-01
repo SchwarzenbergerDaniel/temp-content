@@ -184,6 +184,26 @@
    "ziel": "danischwarz9993@gmail.com",
    "ok": false,
    "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
+  },
+  {
+   "id": "mvxu3v5jhkcg",
+   "zeit": "2026-11-01T12:56:55.159Z",
+   "wer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Sophie Steiner",
+   "ziel": "schwarzenberger.dan@gmail.com",
+   "ok": false,
+   "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
+  },
+  {
+   "id": "mvxu3v5jihbr",
+   "zeit": "2026-11-01T12:56:55.159Z",
+   "wer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Thomas Weiß",
+   "ziel": "schwarzenbergerd3110@gmail.com",
+   "ok": false,
+   "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
   }
  ]
 }
