@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "customers": [
+    {
+      "id": "cust_65y6w9ohzvm3",
+      "name": "Martin Krämer",
+      "email": "terrorgans123@gmail.com",
+      "role": "files",
+      "createdAt": "2026-11-01T12:51:15.142Z",
+      "provision": {
+        "at": "",
+        "groupId": "",
+        "siteId": "companyname999366.sharepoint.com,98bc5302-f959-430c-a763-3741fcd18c17,ddae69cf-212d-4dc0-a39f-ecec93070a0f",
+        "siteUrl": "https://companyname999366.sharepoint.com/sites/portal-martin-kraemer-t4jxdm",
+        "folderUrl": "https://companyname999366.sharepoint.com/sites/portal-martin-kraemer-t4jxdm/Freigegebene%20Dokumente",
+        "pageUrl": "https://companyname999366.sharepoint.com/sites/portal-martin-kraemer-t4jxdm/SitePages/Home.aspx",
+        "mailSent": "",
+        "eigentuemer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+        "berechtigt": [
+          "terrorgans123@gmail.com"
+        ]
+      }
+    }
+  ]
+}
