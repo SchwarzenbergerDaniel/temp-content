@@ -24,6 +24,30 @@
    "ziel": "terrorgans123@gmail.com",
    "ok": true,
    "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
+  },
+  {
+   "id": "mvxtxp7t32mo",
+   "zeit": "2026-11-01T12:52:07.529Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "site_aktualisiert",
+   "titel": "Matthias Haas",
+   "ziel": "danischwarz999@gmail.com",
+   "ok": true,
+   "detail": "Vorhandene Site wiedergefunden · Mitarbeiter als Eigentümer eingetragen · Alle Mitarbeiter der Kanzlei: Vollzugriff · Ordnerstruktur angelegt · Kunde berechtigt (Nur Dateien) · Portal-Vorlage erreichbar · Portal in Startseite eingebettet · Willkommens-E-Mail verschickt",
+   "links": {
+    "site": "https://companyname999366.sharepoint.com/sites/portal-matthias-haas-zinhfo",
+    "seite": "https://companyname999366.sharepoint.com/sites/portal-matthias-haas-zinhfo/SitePages/Home.aspx"
+   }
+  },
+  {
+   "id": "mvxtxp7t4uss",
+   "zeit": "2026-11-01T12:52:07.529Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Matthias Haas",
+   "ziel": "danischwarz999@gmail.com",
+   "ok": true,
+   "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
   }
  ]
 }
