@@ -1,0 +1,219 @@
+{
+ "version": 1,
+ "ordner": [
+  {
+   "id": "d_pge5lktuks",
+   "name": "2026",
+   "children": [
+    {
+     "id": "d_rs8nu51uks",
+     "name": "Belege in pdf",
+     "children": [
+      {
+       "id": "d_654uws2ukt",
+       "name": "01-Jänner",
+       "children": []
+      },
+      {
+       "id": "d_fsyezdsukt",
+       "name": "02-Februar",
+       "children": []
+      },
+      {
+       "id": "d_mwaa2qsukt",
+       "name": "03-März",
+       "children": []
+      },
+      {
+       "id": "d_qm3myydukt",
+       "name": "04-April",
+       "children": []
+      },
+      {
+       "id": "d_w21tpesukt",
+       "name": "05-Mai",
+       "children": []
+      },
+      {
+       "id": "d_dacl7uhukt",
+       "name": "06-Juni",
+       "children": []
+      },
+      {
+       "id": "d_iap1a7eukt",
+       "name": "07-Juli",
+       "children": []
+      },
+      {
+       "id": "d_8873qnlukt",
+       "name": "08-August",
+       "children": []
+      },
+      {
+       "id": "d_ecsd6e0ukt",
+       "name": "09-September",
+       "children": []
+      },
+      {
+       "id": "d_wllff97ukt",
+       "name": "10-Oktober",
+       "children": []
+      },
+      {
+       "id": "d_uc2xzswukt",
+       "name": "11-November",
+       "children": []
+      },
+      {
+       "id": "d_yq7ufmqukt",
+       "name": "12-Dezember",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "d_l24ci9zukt",
+     "name": "files",
+     "children": [
+      {
+       "id": "d_tw5xsyhukt",
+       "name": "01-Jänner",
+       "children": []
+      },
+      {
+       "id": "d_cq2gsjoukt",
+       "name": "02-Februar",
+       "children": []
+      },
+      {
+       "id": "d_ni2gr6mukt",
+       "name": "03-März",
+       "children": []
+      },
+      {
+       "id": "d_ny6zk7zukt",
+       "name": "04-April",
+       "children": []
+      },
+      {
+       "id": "d_af6mh0rukt",
+       "name": "05-Mai",
+       "children": []
+      },
+      {
+       "id": "d_jgu3ijdukt",
+       "name": "06-Juni",
+       "children": []
+      },
+      {
+       "id": "d_4xdx9onukt",
+       "name": "07-Juli",
+       "children": []
+      },
+      {
+       "id": "d_yeoi35xukt",
+       "name": "08-August",
+       "children": []
+      },
+      {
+       "id": "d_0ydbeieukt",
+       "name": "09-September",
+       "children": []
+      },
+      {
+       "id": "d_n1m0qb3ukt",
+       "name": "10-Oktober",
+       "children": []
+      },
+      {
+       "id": "d_cap4oz1ukt",
+       "name": "11-November",
+       "children": []
+      },
+      {
+       "id": "d_hd8u91dukt",
+       "name": "12-Dezember",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "d_9jlojfwukt",
+     "name": "Lohnverrechnung",
+     "children": [
+      {
+       "id": "d_zybip7uukt",
+       "name": "01-Jänner",
+       "children": []
+      },
+      {
+       "id": "d_89iz0bjukt",
+       "name": "02-Februar",
+       "children": []
+      },
+      {
+       "id": "d_pvmbvgfukt",
+       "name": "03-März",
+       "children": []
+      },
+      {
+       "id": "d_utqu0ljukt",
+       "name": "04-April",
+       "children": []
+      },
+      {
+       "id": "d_u1y5225ukt",
+       "name": "05-Mai",
+       "children": []
+      },
+      {
+       "id": "d_ymynpqyukt",
+       "name": "06-Juni",
+       "children": []
+      },
+      {
+       "id": "d_mvrn0xgukt",
+       "name": "07-Juli",
+       "children": []
+      },
+      {
+       "id": "d_59gyfz8ukt",
+       "name": "08-August",
+       "children": []
+      },
+      {
+       "id": "d_oj8poxhukt",
+       "name": "09-September",
+       "children": []
+      },
+      {
+       "id": "d_zkij23oukt",
+       "name": "10-Oktober",
+       "children": []
+      },
+      {
+       "id": "d_f36p1a1ukt",
+       "name": "11-November",
+       "children": []
+      },
+      {
+       "id": "d_3za2y1uukt",
+       "name": "12-Dezember",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d_24mnwlhukt",
+   "name": "Jahresauswertungen",
+   "children": []
+  },
+  {
+   "id": "d_jt8oottukt",
+   "name": "Verträge",
+   "children": []
+  }
+ ]
+}
