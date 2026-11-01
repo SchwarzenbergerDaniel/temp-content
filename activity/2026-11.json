@@ -264,6 +264,30 @@
    "ziel": "",
    "ok": true,
    "detail": ""
+  },
+  {
+   "id": "mvxunsfjp68z",
+   "zeit": "2026-11-01T13:12:24.750Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "site_angelegt",
+   "titel": "d schwarz",
+   "ziel": "office@schwarzenberger-daniel.com",
+   "ok": true,
+   "detail": "Kommunikationsseite angelegt · Mitarbeiter als Eigentümer eingetragen · Alle Mitarbeiter der Kanzlei: Vollzugriff · Ordnerstruktur angelegt · Externe Freigabe der Site aktiviert · Kunde berechtigt (Nur Dateien) · Portal-Vorlage erreichbar · Portal in Startseite eingebettet · Willkommens-E-Mail verschickt",
+   "links": {
+    "site": "https://companyname999366.sharepoint.com/sites/portal-d-schwarz-y3h7fk",
+    "seite": "https://companyname999366.sharepoint.com/sites/portal-d-schwarz-y3h7fk/SitePages/Home.aspx"
+   }
+  },
+  {
+   "id": "mvxunsfjqeag",
+   "zeit": "2026-11-01T13:12:24.751Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "d schwarz",
+   "ziel": "office@schwarzenberger-daniel.com",
+   "ok": true,
+   "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
   }
  ]
 }
