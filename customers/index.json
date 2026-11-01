@@ -108,6 +108,26 @@
           "danischwarz9993@gmail.com"
         ]
       }
+    },
+    {
+      "id": "cust_yezj7b4far29",
+      "name": "Sophie Steiner",
+      "email": "schwarzenberger.dan@gmail.com",
+      "role": "files",
+      "createdAt": "2026-11-01T12:51:15.143Z",
+      "provision": {
+        "at": "",
+        "groupId": "",
+        "siteId": "companyname999366.sharepoint.com,52a38a15-9594-44bf-9aec-0f29dc874a78,ddae69cf-212d-4dc0-a39f-ecec93070a0f",
+        "siteUrl": "https://companyname999366.sharepoint.com/sites/portal-sophie-steiner-q35tmo",
+        "folderUrl": "https://companyname999366.sharepoint.com/sites/portal-sophie-steiner-q35tmo/Freigegebene%20Dokumente",
+        "pageUrl": "https://companyname999366.sharepoint.com/sites/portal-sophie-steiner-q35tmo/SitePages/Home.aspx",
+        "mailSent": "",
+        "eigentuemer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+        "berechtigt": [
+          "schwarzenberger.dan@gmail.com"
+        ]
+      }
     }
   ]
 }
