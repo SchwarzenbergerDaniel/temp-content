@@ -120,6 +120,30 @@
    "ziel": "schwarzenberger.dan@gmail.com",
    "ok": true,
    "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
+  },
+  {
+   "id": "mvxu0iy4bhjg",
+   "zeit": "2026-11-01T12:54:19.372Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "site_aktualisiert",
+   "titel": "Thomas Weiß",
+   "ziel": "schwarzenbergerd3110@gmail.com",
+   "ok": true,
+   "detail": "Vorhandene Site wiedergefunden · Mitarbeiter als Eigentümer eingetragen · Alle Mitarbeiter der Kanzlei: Vollzugriff · Ordnerstruktur angelegt · Kunde berechtigt (Nur Dateien) · Portal-Vorlage erreichbar · Portal in Startseite eingebettet · Willkommens-E-Mail verschickt",
+   "links": {
+    "site": "https://companyname999366.sharepoint.com/sites/portal-thomas-weiss-fg1a8f",
+    "seite": "https://companyname999366.sharepoint.com/sites/portal-thomas-weiss-fg1a8f/SitePages/Home.aspx"
+   }
+  },
+  {
+   "id": "mvxu0iy4cesj",
+   "zeit": "2026-11-01T12:54:19.372Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Thomas Weiß",
+   "ziel": "schwarzenbergerd3110@gmail.com",
+   "ok": true,
+   "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
   }
  ]
 }
