@@ -254,6 +254,16 @@
    "ziel": "",
    "ok": true,
    "detail": "Mails: Editorial"
+  },
+  {
+   "id": "mvxuj57do4gb",
+   "zeit": "2026-11-01T13:08:48.025Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "veroeffentlicht",
+   "titel": "Webseite",
+   "ziel": "",
+   "ok": true,
+   "detail": ""
   }
  ]
 }
