@@ -96,6 +96,30 @@
    "ziel": "danischwarz9993@gmail.com",
    "ok": true,
    "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
+  },
+  {
+   "id": "mvxu009f98ld",
+   "zeit": "2026-11-01T12:53:55.155Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "site_aktualisiert",
+   "titel": "Sophie Steiner",
+   "ziel": "schwarzenberger.dan@gmail.com",
+   "ok": true,
+   "detail": "Vorhandene Site wiedergefunden · Mitarbeiter als Eigentümer eingetragen · Alle Mitarbeiter der Kanzlei: Vollzugriff · Ordnerstruktur angelegt · Kunde berechtigt (Nur Dateien) · Portal-Vorlage erreichbar · Portal in Startseite eingebettet · Willkommens-E-Mail verschickt",
+   "links": {
+    "site": "https://companyname999366.sharepoint.com/sites/portal-sophie-steiner-q35tmo",
+    "seite": "https://companyname999366.sharepoint.com/sites/portal-sophie-steiner-q35tmo/SitePages/Home.aspx"
+   }
+  },
+  {
+   "id": "mvxu009fa9ws",
+   "zeit": "2026-11-01T12:53:55.155Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Sophie Steiner",
+   "ziel": "schwarzenberger.dan@gmail.com",
+   "ok": true,
+   "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
   }
  ]
 }
