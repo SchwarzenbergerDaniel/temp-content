@@ -164,6 +164,16 @@
    "ziel": "danischwarz999@gmail.com",
    "ok": false,
    "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
+  },
+  {
+   "id": "mvxu13t7frar",
+   "zeit": "2026-11-01T12:54:46.411Z",
+   "wer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Sabine Aigner",
+   "ziel": "danischwarz9992@gmail.com",
+   "ok": false,
+   "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
   }
  ]
 }
