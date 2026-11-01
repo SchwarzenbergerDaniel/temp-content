@@ -35,13 +35,20 @@
       "role": "files",
       "createdAt": "2026-11-01T12:51:15.143Z",
       "provision": {
-        "at": "",
+        "at": "2026-11-01T12:52:01.140Z",
         "groupId": "",
         "siteId": "companyname999366.sharepoint.com,f8a48f76-f1b0-4ce6-874c-d312c64bbbce,ddae69cf-212d-4dc0-a39f-ecec93070a0f",
         "siteUrl": "https://companyname999366.sharepoint.com/sites/portal-matthias-haas-zinhfo",
         "folderUrl": "https://companyname999366.sharepoint.com/sites/portal-matthias-haas-zinhfo/Freigegebene%20Dokumente",
         "pageUrl": "https://companyname999366.sharepoint.com/sites/portal-matthias-haas-zinhfo/SitePages/Home.aspx",
-        "mailSent": "",
+        "mailSent": "2026-11-01T12:52:05.208Z",
+        "mailZustellung": {
+          "gesendet": "2026-11-01T12:52:05.208Z",
+          "an": "danischwarz999@gmail.com",
+          "von": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+          "betreff": "Willkommen bei BENA AFS – schön, dass Sie da sind!",
+          "stand": "pruefen"
+        },
         "eigentuemer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
         "berechtigt": [
           "danischwarz999@gmail.com"
