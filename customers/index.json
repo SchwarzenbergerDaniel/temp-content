@@ -62,13 +62,20 @@
       "role": "files",
       "createdAt": "2026-11-01T12:51:15.143Z",
       "provision": {
-        "at": "",
+        "at": "2026-11-01T12:52:27.136Z",
         "groupId": "",
         "siteId": "companyname999366.sharepoint.com,6973b06f-a158-4e63-b873-d9a446a25daa,ddae69cf-212d-4dc0-a39f-ecec93070a0f",
         "siteUrl": "https://companyname999366.sharepoint.com/sites/portal-sabine-aigner-64zdic",
         "folderUrl": "https://companyname999366.sharepoint.com/sites/portal-sabine-aigner-64zdic/Freigegebene%20Dokumente",
         "pageUrl": "https://companyname999366.sharepoint.com/sites/portal-sabine-aigner-64zdic/SitePages/Home.aspx",
-        "mailSent": "",
+        "mailSent": "2026-11-01T12:52:30.974Z",
+        "mailZustellung": {
+          "gesendet": "2026-11-01T12:52:30.974Z",
+          "an": "danischwarz9992@gmail.com",
+          "von": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+          "betreff": "Willkommen bei BENA AFS – schön, dass Sie da sind!",
+          "stand": "pruefen"
+        },
         "eigentuemer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
         "berechtigt": [
           "danischwarz9992@gmail.com"
