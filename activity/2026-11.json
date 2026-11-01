@@ -144,6 +144,26 @@
    "ziel": "schwarzenbergerd3110@gmail.com",
    "ok": true,
    "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
+  },
+  {
+   "id": "mvxu0nskdlhm",
+   "zeit": "2026-11-01T12:54:25.652Z",
+   "wer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Martin Krämer",
+   "ziel": "terrorgans123@gmail.com",
+   "ok": false,
+   "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
+  },
+  {
+   "id": "mvxu0nske8fk",
+   "zeit": "2026-11-01T12:54:25.652Z",
+   "wer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Matthias Haas",
+   "ziel": "danischwarz999@gmail.com",
+   "ok": false,
+   "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
   }
  ]
 }
