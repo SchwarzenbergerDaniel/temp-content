@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "meta": {
+    "brand": "BENA AFS",
+    "logo": "logo.png",
+    "brandSub": "Steuerberatung",
+    "context": "Portal",
+    "footerOrg": "BENA AFS Steuerberatung",
+    "footerMeta": "",
+    "theme": {
+      "ink": "#1b1b1a",
+      "body": "#46453f",
+      "muted": "#8a887f",
+      "line": "#e4e1d9",
+      "paper": "#ffffff",
+      "shell": "#f6f4ef",
+      "accent": "#0b6b9a",
+      "headingFont": "Georgia, 'Times New Roman', Cambria, serif",
+      "bodyFont": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    },
+    "useFullHtml": true,
+    "fullHtml": "<!DOCTYPE html>\n<html lang=\"de\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>BENA AFS – Portal</title>\n<!--\n  DESIGN 2 · „EDITORIAL\"\n  Warmes Papier, Serifen-Überschriften, Haarlinien, nummerierte Kapitel –\n  seriös wie ein gut gesetzter Kanzleibrief. Tiefblau statt Hellblau als\n  Akzent (harmoniert mit dem Logo, besser lesbar).\n  Bilder: logo.png, straussen.png (Standardbilder der App, liegen neben\n  der template.html im öffentlichen Repo). In der App: Einstellungen → Design wählen.\n-->\n<style>\n  :root{\n    --papier:#f7f5f0; --weiss:#fffefb; --tinte:#1c1c1a; --text:#46453f; --leise:#8a877e;\n    --linie:#e2ddd2; --akzent:#0e5a82; --akzent-hell:#e7eff4;\n    --serif:Georgia,\"Iowan Old Style\",\"Palatino Linotype\",\"Book Antiqua\",Cambria,serif;\n    --sans:\"Segoe UI\",-apple-system,BlinkMacSystemFont,Roboto,\"Helvetica Neue\",Arial,sans-serif;\n  }\n  *{box-sizing:border-box;margin:0;padding:0}\n  body{background:var(--papier);font-family:var(--sans);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}\n  img{max-width:100%;display:block}\n  a{color:var(--akzent)}\n  .wrap{max-width:1080px;margin:0 auto;background:var(--weiss);border-left:1px solid var(--linie);border-right:1px solid var(--linie)}\n  .innen{padding-left:64px;padding-right:64px}\n\n  /* Kopfleiste */\n  .kopf{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 64px;border-bottom:1px solid var(--tinte)}\n  .kopf img{height:38px;width:auto}\n  .kopf .meta{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--leise);text-align:right}\n  .kopf .meta b{color:var(--tinte);font-weight:600}\n\n  /* Einstieg */\n  .hero{padding:76px 64px 60px;display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:end;border-bottom:1px solid var(--linie)}\n  .kicker{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--akzent);font-weight:600}\n  h1{font-family:var(--serif);font-weight:400;font-size:54px;line-height:1.06;letter-spacing:-.015em;color:var(--tinte);margin:18px 0 0}\n  h1 i{color:var(--akzent)}\n  .hero .lead{font-size:17.5px;border-left:2px solid var(--akzent);padding-left:22px}\n\n  /* Kapitel */\n  section{padding:64px 0;border-bottom:1px solid var(--linie)}\n  .kapitel{display:grid;grid-template-columns:180px 1fr;gap:40px}\n  .nr{font-family:var(--serif);font-size:15px;color:var(--leise)}\n  .nr b{display:block;font-size:44px;line-height:1;color:var(--tinte);font-weight:400;margin-bottom:10px}\n  h2{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.2;color:var(--tinte);margin-bottom:26px}\n\n  /* Leistungen */\n  .leistungen{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--tinte)}\n  .leistungen div{padding:24px 28px 26px 0;border-bottom:1px solid var(--linie)}\n  .leistungen div:nth-child(2n){padding-left:28px;padding-right:0;border-left:1px solid var(--linie)}\n  .leistungen h3{font-family:var(--serif);font-weight:400;font-size:21px;color:var(--tinte);margin-bottom:6px}\n  .leistungen p{font-size:15px}\n\n  /* Fristen */\n  .fristen{list-style:none;border-top:1px solid var(--tinte)}\n  .fristen li{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px solid var(--linie)}\n  .fristen .was{color:var(--tinte);font-weight:600;white-space:nowrap}\n  .fristen .punkte{flex:1;border-bottom:1px dotted #bdb6a6;transform:translateY(-4px);min-width:24px}\n  .fristen .wann{font-family:var(--serif);font-style:italic;color:var(--akzent);white-space:nowrap;font-size:17px}\n\n  /* Sprachen – großes Bild */\n  .bild{margin:0 0 30px}\n  .bild img{width:100%;max-height:300px;object-fit:contain;background:#fff;border-top:1px solid var(--tinte);border-bottom:1px solid var(--linie);padding:18px 0}\n  .bild figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:10px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--leise)}\n  /* Trennpunkte sitzen in der Lücke; am Zeilenanfang fallen sie aus dem\n     Listenrand und werden abgeschnitten (overflow:hidden). */\n  .sprachliste{list-style:none;display:flex;flex-wrap:wrap;column-gap:1.3em;overflow:hidden;font-family:var(--serif);font-size:21px;line-height:1.9;color:var(--tinte)}\n  .sprachliste li{position:relative}\n  .sprachliste span{unicode-bidi:isolate}\n  .sprachliste li::before{content:\"·\";position:absolute;left:-.85em;color:var(--akzent)}\n  .kapitel>div{min-width:0}\n  .sprachen .intro{font-size:17px;max-width:60ch;margin-bottom:18px}\n\n  /* FAQ */\n  .faq details{border-bottom:1px solid var(--linie)}\n  .faq details:first-of-type{border-top:1px solid var(--tinte)}\n  .faq summary{list-style:none;cursor:pointer;padding:20px 48px 20px 0;font-family:var(--serif);font-size:19px;color:var(--tinte);position:relative}\n  .faq summary::-webkit-details-marker{display:none}\n  .faq summary::after{content:\"+\";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-family:var(--sans);font-size:22px;color:var(--akzent);transition:transform .2s}\n  .faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}\n  .faq .antwort{padding:0 0 22px;max-width:62ch}\n\n  /* Kontakt / Fuß */\n  .kontakt{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}\n  .kontakt p.gross{font-family:var(--serif);font-size:30px;line-height:1.25;color:var(--tinte)}\n  .kontakt .wege{text-align:right;font-size:15px}\n  .hinweis{margin-top:40px;padding:16px 0;border-top:1px solid var(--tinte);font-size:14.5px;color:var(--text)}\n  .hinweis b{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--akzent);font-size:16px}\n  footer{padding:26px 64px 34px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;letter-spacing:.04em;color:var(--leise)}\n\n  @media (max-width:900px){\n    .innen,.kopf,footer{padding-left:32px;padding-right:32px}\n    .hero{grid-template-columns:1fr;gap:28px;padding:56px 32px 44px}\n    .kapitel{grid-template-columns:1fr;gap:6px}\n    .nr b{font-size:32px}\n    h1{font-size:42px}\n  }\n  @media (max-width:560px){\n    .innen,.kopf,footer{padding-left:20px;padding-right:20px}\n    .hero{padding:44px 20px 36px}\n    section{padding:44px 0}\n    h1{font-size:34px}\n    h2{font-size:26px}\n    .kopf img{height:30px}\n    .kopf .meta{font-size:10px;letter-spacing:.14em}\n    .leistungen{grid-template-columns:1fr}\n    .leistungen div,.leistungen div:nth-child(2n){padding:20px 0;border-left:0}\n    .fristen li{flex-wrap:wrap}\n    .fristen .punkte{display:none}\n    .fristen .wann{width:100%}\n    .sprachliste{font-size:18px}\n    .kontakt{grid-template-columns:1fr}\n    .kontakt .wege{text-align:left}\n    .kontakt p.gross{font-size:24px}\n  }\n</style>\n</head>\n<body>\n<div class=\"wrap\">\n\n  <header class=\"kopf\">\n    <img src=\"logo.png\" alt=\"BENA AFS\" width=\"121\" height=\"38\">\n    <p class=\"meta\"><b>Portal</b><br>Steuerberatung</p>\n  </header>\n\n  <div class=\"hero\">\n    <div>\n      <p class=\"kicker\">Willkommen</p>\n      <h1>Steuerberatung, die <i>mitdenkt.</i></h1>\n    </div>\n    <p class=\"lead\">Klein genug für persönliche Beratung – groß genug für Ihren Erfolg. In diesem Portal finden Sie Ihre Unterlagen, wichtige Fristen und Antworten auf die häufigsten Fragen.</p>\n  </div>\n\n  <section class=\"innen\">\n    <div class=\"kapitel\">\n      <p class=\"nr\"><b>01</b>Leistungen</p>\n      <div>\n        <h2>Was wir für Sie übernehmen.</h2>\n        <div class=\"leistungen\">\n          <div><h3>Buchhaltung</h3><p>Laufend, digital und vollständig – von der Belegerfassung bis zum Reporting.</p></div>\n          <div><h3>Lohnverrechnung</h3><p>Monatliche Abrechnung, An- und Abmeldungen, Auszahlungen – pünktlich und korrekt.</p></div>\n          <div><h3>Jahresabschlüsse</h3><p>Für GmbH, OG, KG und Einzelunternehmen – fristgerecht und rechtssicher.</p></div>\n          <div><h3>Beratung</h3><p>ESt, KöSt, USt, GSVG/ASVG – klare Antworten auf komplexe Fragen.</p></div>\n        </div>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"innen\">\n    <div class=\"kapitel\">\n      <p class=\"nr\"><b>02</b>Fristen</p>\n      <div>\n        <h2>Termine, die zählen.</h2>\n        <ul class=\"fristen\">\n          <li><span class=\"was\">Umsatzsteuervoranmeldung</span><span class=\"punkte\"></span><span class=\"wann\">15. des Folgemonats</span></li>\n          <li><span class=\"was\">KöSt- / ESt-Vorauszahlung</span><span class=\"punkte\"></span><span class=\"wann\">15. Feb · Mai · Aug · Nov</span></li>\n          <li><span class=\"was\">Steuererklärungen</span><span class=\"punkte\"></span><span class=\"wann\">30. April</span></li>\n          <li><span class=\"was\">Jahresabschluss</span><span class=\"punkte\"></span><span class=\"wann\">30. September (Folgejahr)</span></li>\n        </ul>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"innen sprachen\">\n    <div class=\"kapitel\">\n      <p class=\"nr\"><b>03</b>Sprachen</p>\n      <div>\n        <h2>Wir sprechen Ihre Sprache.</h2>\n        <figure class=\"bild\">\n          <img src=\"straussen.png\" alt=\"Drei Strauße blicken neugierig in die Kamera\" width=\"514\" height=\"470\">\n          <figcaption><span>Wir hören zu – in Ihrer Sprache.</span><span>Beratung in neun Sprachen</span></figcaption>\n        </figure>\n        <p class=\"intro\">Beratung gelingt am besten in der Muttersprache. Bei uns werden Sie in neun verschiedenen Sprachen persönlich betreut.</p>\n        <ul class=\"sprachliste\" aria-label=\"Beratungssprachen\">\n          <li><span>Deutsch</span></li>\n          <li><span lang=\"en\">English</span></li>\n          <li><span lang=\"ar\" dir=\"rtl\">العربية</span></li>\n          <li><span lang=\"fa\" dir=\"rtl\">فارسی</span></li>\n          <li><span lang=\"sr\">српски</span></li>\n          <li><span lang=\"bs\">bosanski</span></li>\n          <li><span lang=\"uk\">українська</span></li>\n          <li><span lang=\"hr\">hrvatski</span></li>\n          <li><span lang=\"ru\">Русский</span></li>\n        </ul>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"innen faq\">\n    <div class=\"kapitel\">\n      <p class=\"nr\"><b>04</b>Fragen</p>\n      <div>\n        <h2>Häufig gefragt.</h2>\n        <details><summary>Wie lade ich Belege korrekt hoch?</summary><p class=\"antwort\">Im richtigen Monatsordner unter „Belege in PDF“ ablegen. Dateiname: Datum_Lieferant_Betrag.</p></details>\n        <details><summary>Mit welcher Auflösung sind Belege gut lesbar?</summary><p class=\"antwort\">Mindestens 300 dpi empfohlen. PDF/A oder JPG, heller Hintergrund, gerade ausgerichtet.</p></details>\n        <details><summary>Welche Dateien lassen sich automatisiert einspielen?</summary><p class=\"antwort\">CSV, CAMT.053 (Kontoauszüge), MT940 sowie gängige PDF-Formate werden unterstützt.</p></details>\n        <details><summary>Welche Unterlagen brauche ich zur Anmeldung eines Dienstnehmers?</summary><p class=\"antwort\">SV-Nummer, Wohnsitz, Bankverbindung, Dienstvertrag, Eintrittstag und Beschäftigungsausmaß.</p></details>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"innen\">\n    <div class=\"kontakt\">\n      <p class=\"gross\">Fragen? Wir sind gerne für Sie da.</p>\n      <p class=\"wege\">persönlich · telefonisch · per E-Mail</p>\n    </div>\n    <p class=\"hinweis\"><b>Ihre Dokumente</b> finden Sie direkt unterhalb dieses Bereichs – dort können Sie auch Belege hochladen.</p>\n  </section>\n\n  <footer>\n    <span>BENA AFS STEUERBERATUNG</span>\n    <span>KUNDENPORTAL</span>\n  </footer>\n\n</div>\n</body>\n</html>\n",
+    "design": "design-2-editorial"
+  },
+  "blocks": [
+    {
+      "id": "hero_le6fgw0z86",
+      "type": "hero",
+      "data": {
+        "eyebrow": "Willkommen",
+        "title": "Steuerberatung, die mitdenkt.",
+        "lead": "Klein genug für persönliche Beratung – groß genug für Ihren Erfolg. In diesem Portal finden Sie Ihre Unterlagen, wichtige Fristen und Antworten auf die häufigsten Fragen."
+      }
+    },
+    {
+      "id": "svc_dt5m88gz86",
+      "type": "services",
+      "data": {
+        "eyebrow": "Leistungen",
+        "items": [
+          {
+            "id": "svci_g92rbwfz86",
+            "title": "Buchhaltung",
+            "desc": "Laufend, digital und vollständig – von der Belegerfassung bis zum Reporting."
+          },
+          {
+            "id": "svci_7bq5q55z86",
+            "title": "Lohnverrechnung",
+            "desc": "Monatliche Abrechnung, An- und Abmeldungen, Auszahlungen – pünktlich und korrekt."
+          },
+          {
+            "id": "svci_1zecf7rz86",
+            "title": "Jahresabschlüsse",
+            "desc": "Für GmbH, OG, KG und Einzelunternehmen – fristgerecht und rechtssicher."
+          },
+          {
+            "id": "svci_bovn3caz86",
+            "title": "Beratung",
+            "desc": "ESt, KöSt, USt, GSVG/ASVG – klare Antworten auf komplexe Fragen."
+          }
+        ]
+      }
+    },
+    {
+      "id": "dl_xi2h31vz86",
+      "type": "deadlines",
+      "data": {
+        "eyebrow": "Wichtige Fristen",
+        "items": [
+          {
+            "id": "dli_omo4a99z86",
+            "label": "Umsatzsteuervoranmeldung",
+            "date": "15. des Folgemonats"
+          },
+          {
+            "id": "dli_yki4gtkz86",
+            "label": "KöSt- / ESt-Vorauszahlung",
+            "date": "15. Feb · Mai · Aug · Nov"
+          },
+          {
+            "id": "dli_51ha63cz86",
+            "label": "Jahresabschluss",
+            "date": "30. September (Folgejahr)"
+          },
+          {
+            "id": "dli_eewhtz1z86",
+            "label": "Steuererklärungen",
+            "date": "30. April"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lng_g8ffbguz86",
+      "type": "languages",
+      "data": {
+        "eyebrow": "Mehrsprachige Beratung",
+        "title": "Wir sprechen Ihre Sprache.",
+        "intro": "Beratung gelingt am besten in der Muttersprache. Bei uns werden Sie in neun Sprachen persönlich betreut.",
+        "image": "straussen.png",
+        "caption": "Wir hören zu – in Ihrer Sprache.",
+        "items": [
+          {
+            "id": "lg_9dajhypz86",
+            "label": "Deutsch"
+          },
+          {
+            "id": "lg_hijjjjiz86",
+            "label": "English"
+          },
+          {
+            "id": "lg_asrj5p5z86",
+            "label": "العربية",
+            "lang": "ar",
+            "dir": "rtl"
+          },
+          {
+            "id": "lg_28tlsfzz86",
+            "label": "فارسی",
+            "lang": "fa",
+            "dir": "rtl"
+          },
+          {
+            "id": "lg_lww6bfyz86",
+            "label": "српски",
+            "lang": "sr"
+          },
+          {
+            "id": "lg_5kq1557z86",
+            "label": "bosanski",
+            "lang": "bs"
+          },
+          {
+            "id": "lg_a3n7jo4z86",
+            "label": "українська",
+            "lang": "uk"
+          },
+          {
+            "id": "lg_3eukv6vz86",
+            "label": "hrvatski",
+            "lang": "hr"
+          },
+          {
+            "id": "lg_gcdk2wuz86",
+            "label": "Русский",
+            "lang": "ru"
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq_aagojnmz86",
+      "type": "faq",
+      "data": {
+        "eyebrow": "Häufige Fragen",
+        "items": [
+          {
+            "id": "faqi_2o1mtvbz86",
+            "q": "Welche Dateien lassen sich automatisiert einspielen?",
+            "a": "CSV, CAMT.053 (Kontoauszüge), MT940 sowie gängige PDF-Formate werden unterstützt."
+          },
+          {
+            "id": "faqi_rvnneagz86",
+            "q": "Mit welcher Auflösung sind Belege gut lesbar?",
+            "a": "Mindestens 300 dpi empfohlen. PDF/A oder JPG, heller Hintergrund, gerade ausgerichtet."
+          },
+          {
+            "id": "faqi_9mhk6moz86",
+            "q": "Welche Unterlagen brauche ich zur Anmeldung eines Dienstnehmers?",
+            "a": "SV-Nummer, Wohnsitz, Bankverbindung, Dienstvertrag, Eintrittstag und Beschäftigungsausmaß."
+          },
+          {
+            "id": "faqi_iei67asz86",
+            "q": "Wie lade ich Belege korrekt hoch?",
+            "a": "Im richtigen Monatsordner unter „Belege in PDF“ ablegen. Dateiname: Datum_Lieferant_Betrag."
+          }
+        ]
+      }
+    }
+  ]
+}
