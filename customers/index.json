@@ -81,6 +81,26 @@
           "danischwarz9992@gmail.com"
         ]
       }
+    },
+    {
+      "id": "cust_gh49dxtynxrv",
+      "name": "Markus Fischer",
+      "email": "danischwarz9993@gmail.com",
+      "role": "files",
+      "createdAt": "2026-11-01T12:51:15.143Z",
+      "provision": {
+        "at": "",
+        "groupId": "",
+        "siteId": "companyname999366.sharepoint.com,7bb8e1b7-cee0-4225-8ce9-e10c4755037c,ddae69cf-212d-4dc0-a39f-ecec93070a0f",
+        "siteUrl": "https://companyname999366.sharepoint.com/sites/portal-markus-fischer-34cwtu",
+        "folderUrl": "https://companyname999366.sharepoint.com/sites/portal-markus-fischer-34cwtu/Freigegebene%20Dokumente",
+        "pageUrl": "https://companyname999366.sharepoint.com/sites/portal-markus-fischer-34cwtu/SitePages/Home.aspx",
+        "mailSent": "",
+        "eigentuemer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+        "berechtigt": [
+          "danischwarz9993@gmail.com"
+        ]
+      }
     }
   ]
 }
