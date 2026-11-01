@@ -204,6 +204,16 @@
    "ziel": "schwarzenbergerd3110@gmail.com",
    "ok": false,
    "detail": "Nicht zugestellt: Microsoft lässt diesen Tenant (noch) nicht nach außen senden (5.7.708)"
+  },
+  {
+   "id": "mvxua51ejhtu",
+   "zeit": "2026-11-01T13:01:47.906Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "datei_heruntergeladen",
+   "titel": "Testkunden-300-eindeutig.xlsx",
+   "ziel": "Markus Fischer",
+   "ok": true,
+   "detail": ""
   }
  ]
 }
