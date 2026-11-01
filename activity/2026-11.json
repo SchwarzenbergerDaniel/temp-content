@@ -48,6 +48,30 @@
    "ziel": "danischwarz999@gmail.com",
    "ok": true,
    "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
+  },
+  {
+   "id": "mvxty96q5fez",
+   "zeit": "2026-11-01T12:52:33.410Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "site_aktualisiert",
+   "titel": "Sabine Aigner",
+   "ziel": "danischwarz9992@gmail.com",
+   "ok": true,
+   "detail": "Vorhandene Site wiedergefunden · Mitarbeiter als Eigentümer eingetragen · Alle Mitarbeiter der Kanzlei: Vollzugriff · Ordnerstruktur angelegt · Kunde berechtigt (Nur Dateien) · Portal-Vorlage erreichbar · Portal in Startseite eingebettet · Willkommens-E-Mail verschickt",
+   "links": {
+    "site": "https://companyname999366.sharepoint.com/sites/portal-sabine-aigner-64zdic",
+    "seite": "https://companyname999366.sharepoint.com/sites/portal-sabine-aigner-64zdic/SitePages/Home.aspx"
+   }
+  },
+  {
+   "id": "mvxty96q6ma0",
+   "zeit": "2026-11-01T12:52:33.410Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Sabine Aigner",
+   "ziel": "danischwarz9992@gmail.com",
+   "ok": true,
+   "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
   }
  ]
 }
