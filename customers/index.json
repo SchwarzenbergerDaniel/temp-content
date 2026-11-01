@@ -135,6 +135,26 @@
           "schwarzenberger.dan@gmail.com"
         ]
       }
+    },
+    {
+      "id": "cust_5hv86xe8yrez",
+      "name": "Thomas Weiß",
+      "email": "schwarzenbergerd3110@gmail.com",
+      "role": "files",
+      "createdAt": "2026-11-01T12:51:15.143Z",
+      "provision": {
+        "at": "",
+        "groupId": "",
+        "siteId": "companyname999366.sharepoint.com,88f5087c-daca-46f5-ac5f-89676eb29af6,ddae69cf-212d-4dc0-a39f-ecec93070a0f",
+        "siteUrl": "https://companyname999366.sharepoint.com/sites/portal-thomas-weiss-fg1a8f",
+        "folderUrl": "https://companyname999366.sharepoint.com/sites/portal-thomas-weiss-fg1a8f/Freigegebene%20Dokumente",
+        "pageUrl": "https://companyname999366.sharepoint.com/sites/portal-thomas-weiss-fg1a8f/SitePages/Home.aspx",
+        "mailSent": "",
+        "eigentuemer": "danielschwarzenberger@companyname999366.onmicrosoft.com",
+        "berechtigt": [
+          "schwarzenbergerd3110@gmail.com"
+        ]
+      }
     }
   ]
 }
