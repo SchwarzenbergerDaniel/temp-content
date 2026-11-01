@@ -72,6 +72,30 @@
    "ziel": "danischwarz9992@gmail.com",
    "ok": true,
    "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
+  },
+  {
+   "id": "mvxtzgvb7qo1",
+   "zeit": "2026-11-01T12:53:30.023Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "site_aktualisiert",
+   "titel": "Markus Fischer",
+   "ziel": "danischwarz9993@gmail.com",
+   "ok": true,
+   "detail": "Vorhandene Site wiedergefunden · Mitarbeiter als Eigentümer eingetragen · Alle Mitarbeiter der Kanzlei: Vollzugriff · Ordnerstruktur angelegt · Kunde berechtigt (Nur Dateien) · Portal-Vorlage erreichbar · Portal in Startseite eingebettet · Willkommens-E-Mail verschickt",
+   "links": {
+    "site": "https://companyname999366.sharepoint.com/sites/portal-markus-fischer-34cwtu",
+    "seite": "https://companyname999366.sharepoint.com/sites/portal-markus-fischer-34cwtu/SitePages/Home.aspx"
+   }
+  },
+  {
+   "id": "mvxtzgvb85va",
+   "zeit": "2026-11-01T12:53:30.023Z",
+   "wer": "DanielSchwarzenberger@companyname999366.onmicrosoft.com",
+   "art": "willkommensmail",
+   "titel": "Markus Fischer",
+   "ziel": "danischwarz9993@gmail.com",
+   "ok": true,
+   "detail": "Verschickt von DanielSchwarzenberger@companyname999366.onmicrosoft.com"
   }
  ]
 }
